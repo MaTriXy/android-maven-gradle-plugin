@@ -23,12 +23,20 @@ buildscript {
 	}
 
 	dependencies {
-		classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
+		classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
 	}
 }
 
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
+```
+
+Or use the new syntax since Gradle 2.1
+
+```Groovy
+plugins {
+  id "com.github.dcendents.android-maven" version "1.5"
+}
 ```
 
 You can set the maven groupId and version in the script build.gradle:
@@ -62,12 +70,14 @@ Note on Releases
 
 The following table shows the compatibility between the android-maven-gradle-plugin and gradle versions. It also lists the plugin name to use:
 
-| Plugin Version | Plugin Name | Gradle Version |
-| ------------- | ----------- | ----------- |
-| 1.0 | android-maven | 1.8+ |
-| 1.1 | android-maven | 1.12+ |
-| 1.2 | com.github.dcendents.android-maven | 2.2+ |
-| 1.3 | com.github.dcendents.android-maven | 2.4+ |
+| Plugin Version | Plugin Name | Dependency Information | Gradle Version |
+| ------------- | ----------- | ----------- | ----------- |
+| 1.0 | android-maven | com.github.dcendents:android-maven-plugin:1.0 | 1.8+ |
+| 1.1 | android-maven | com.github.dcendents:android-maven-plugin:1.1 | 1.12+ |
+| 1.2 | com.github.dcendents.android-maven | com.github.dcendents:android-maven-plugin:1.2 | 2.2+ |
+| 1.3 | com.github.dcendents.android-maven | com.github.dcendents:android-maven-gradle-plugin:1.3 | 2.4+ |
+| 1.4.1 | com.github.dcendents.android-maven | com.github.dcendents:android-maven-gradle-plugin:1.4.1 | 2.14+ |
+| 1.5 | com.github.dcendents.android-maven | com.github.dcendents:android-maven-gradle-plugin:1.5 | 3.0+ |
 
 
 Build Metrics

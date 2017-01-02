@@ -1,10 +1,14 @@
 language: android
 android:
   components:
-    - build-tools-22.0.1
-    - android-22
+    - tools
+    - build-tools-24.0.0
+    - android-24
   licenses:
     - 'android.*'
+
+jdk:
+  - oraclejdk8
 
 script: ./gradlew clean build --info --stacktrace
 
